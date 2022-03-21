@@ -60,9 +60,13 @@ let consultaViagemTipo = (vetViagem, tipo) => {
     }
 }
 let consultaViagemBrt = (vetViagem, pais) => {
+    let menorPreco = 999999999999
     for(let i=0;i<vetViagem.length;i++){
         if (vetViagem[i].pais == pais) {
-            console.log(vetViagem[i])
+            if(vetViagem[i].preco <= menorPreco){
+                menorPreco = vetViagem[i].preco
+            }
         }
     }
+    console.log(`O menor preço para uma viagem no ${pais} é de ${menorPreco}`)
 }
