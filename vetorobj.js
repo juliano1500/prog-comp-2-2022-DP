@@ -66,7 +66,7 @@ let gerenciaRedesSociais = () => {
       i++
     }
     */
-   
+
     // Exe1) o usuário informa a rede social, e o programa retorna quantos posts foram feitos
     let codigo = Number(prompt(`Informe o código da rede social`))
     // percorre vetor procurando
@@ -99,7 +99,7 @@ let gerenciaRedesSociais = () => {
 
     // Exe3) o usuário informa  o login do usuário, e o programa retorna quantos posts ele fez
     // solicitar usuário informar login
-    let login = prompt(`Informe o login do usuario desejado`)
+    let login = prompt(`Informe o login do usuário desejado`)
     // procura o login no vetor de usuários
     let somaPosts = 0
     let achou = false // não encontrei o usuário
