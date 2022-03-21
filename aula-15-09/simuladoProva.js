@@ -6,9 +6,13 @@ let sistemaImobiliaria = () => {
         switch(opcao){
             case 1: cadastraImovel(vetImoveis)
                     break
-            case 2:
-            case 3:
-            case 4:
+            case 2: let tipo = prompt(`Qual o tipo do imóvel A ou C?`).toUpperCase()
+                    consultaImoveis(vetImoveis, tipo)
+                    break
+            case 3: consultaValorTotal(vetImoveis)
+                    break
+            case 4:consultaImoveisGrandes(vetImoveis)
+                    break
             case 5: alert(`Programa será encerrado`)
                     break
             default: alert(`Opção inválida`)
@@ -36,5 +40,25 @@ let cadastraImovel = (vetImoveis) => {
         vetImoveis.push(objeto)
         alert(`Imóvel cadastrado com sucesso`)
     }
-    vetImoveis.push(objeto)
+}
+let consultaImoveis = (vetImoveis, tipo) => {
+    for(let i=0;i<vetImoveis.length;i++){
+        if (vetImoveis[i].tipo == tipo){
+            console.log(vetImoveis[i])
+        }
+    }
+}
+let consultaValorTotal = (vetImoveis) => {
+    let soma = 0
+    for(let i=0;i<vetImoveis.length;i++){
+        soma = soma + vetImoveis[i].valor
+    }
+    alert(`O valor total dos imóveis é ${soma}`)
+}
+let consultaImoveisGrandes = (vetImoveis) => {
+    for(let i=0;i<vetImoveis.length;i++){
+        if (vetImoveis[i].tamanho > 100){
+            console.log(vetImoveis[i])
+        }
+    }
 }
