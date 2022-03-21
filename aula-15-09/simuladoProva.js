@@ -56,7 +56,6 @@ let consultaValorTotal = (vetImoveis) => {
     alert(`O valor total dos imóveis é ${soma}`)
 }
 let consultaImoveisGrandes = (vetImoveis) => {
-    let soma = 0
     for(let i=0;i<vetImoveis.length;i++){
         if (vetImoveis[i].tamanho > 100){
             console.log(vetImoveis[i])
